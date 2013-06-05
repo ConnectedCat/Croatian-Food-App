@@ -1,0 +1,613 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+   
+@font-face {
+	font-family: 'Conv_Code Pro';
+	src: url('fonts/Code Pro.eot');
+	src: local('☺'), url('fonts/Code Pro.woff') format('woff'), url('fonts/Code Pro.ttf') format('truetype'), url('fonts/Code Pro.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_Code Pro Black';
+	src: url('fonts/Code Pro Black.eot');
+	src: local('☺'), url('fonts/Code Pro Black.woff') format('woff'), url('fonts/Code Pro Black.ttf') format('truetype'), url('fonts/Code Pro Black.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_Code Pro Black LC';
+	src: url('fonts/Code Pro Black LC.eot');
+	src: local('☺'), url('fonts/Code Pro Black LC.woff') format('woff'), url('fonts/Code Pro Black LC.ttf') format('truetype'), url('fonts/Code Pro Black LC.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Code Pro Bold';
+	src: url('fonts/Code Pro Bold.eot');
+	src: local('☺'), url('fonts/Code Pro Bold.woff') format('woff'), url('fonts/Code Pro Bold.ttf') format('truetype'), url('fonts/Code Pro Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Code Pro Bold LC';
+	src: url('fonts/Code Pro Bold LC.eot');
+	src: local('☺'), url('fonts/Code Pro Bold LC.woff') format('woff'), url('fonts/Code Pro Bold LC.ttf') format('truetype'), url('fonts/Code Pro Bold LC.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Code Pro Demo';
+	src: url('fonts/Code Pro Demo.eot');
+	src: local('☺'), url('fonts/Code Pro Demo.woff') format('woff'), url('fonts/Code Pro Demo.ttf') format('truetype'), url('fonts/Code Pro Demo.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Code Pro LC';
+	src: url('fonts/Code Pro LC.eot');
+	src: local('☺'), url('fonts/Code Pro LC.woff') format('woff'), url('fonts/Code Pro LC.ttf') format('truetype'), url('fonts/Code Pro LC.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Code Pro Light';
+	src: url('fonts/Code Pro Light.eot');
+	src: local('☺'), url('fonts/Code Pro Light.woff') format('woff'), url('fonts/Code Pro Light.ttf') format('truetype'), url('fonts/Code Pro Light.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Code Pro Light Demo';
+	src: url('fonts/Code Pro Light Demo.eot');
+	src: local('☺'), url('fonts/Code Pro Light Demo.woff') format('woff'), url('fonts/Code Pro Light Demo.ttf') format('truetype'), url('fonts/Code Pro Light Demo.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Code Pro Light LC';
+	src: url('fonts/Code Pro Light LC.eot');
+	src: local('☺'), url('fonts/Code Pro Light LC.woff') format('woff'), url('fonts/Code Pro Light LC.ttf') format('truetype'), url('fonts/Code Pro Light LC.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	overflow: hidden;
+}
+section#content {
+	width: 960px;
+	height: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	position: relative;
+	-webkit-box-shadow: 2px -1px 16px rgba(50, 50, 50, 0.5);
+	-moz-box-shadow:    2px -1px 16px rgba(50, 50, 50, 0.5);
+	box-shadow:         2px -1px 16px rgba(50, 50, 50, 0.5);
+}
+
+header {
+	background: url(../img/topOrnament.png) repeat-x;
+	height: 36px;
+}
+
+section#main {
+	height: 604px;
+}
+
+#main h1 {
+	font: 37px 'Code Pro Bold LC', sans-serif;
+}
+
+#main h2 {
+	font: 25px 'Code Pro Bold LC', sans-serif;
+	text-align: center;
+}
+
+#main p {
+	font: 24px 'Code Pro LC', sans-serif;
+}
+
+form span {
+	margin-left: 5px;
+	font: 21px/30px 'Helvetica', sans-serif;
+	position: relative;
+    top: 2px;
+}
+
+#error {
+	bottom: 130px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+#error p{
+	color: #FF0000;
+	font: bold 14px 'Helvetica',sans-serif;
+}
+
+/* start page */
+
+#logoEng {
+	position: absolute;
+	left: 193px;
+	top: 184px;
+}
+
+#english p, #croatian p {
+	font: 30px/33px 'Code Pro Bold LC', sans-serif !important;
+	margin: 0;
+	cursor: pointer;
+}
+
+#english p {
+	position: absolute;
+	left: 243px;
+	top: 369px;
+}
+
+#croatian p {
+	position: absolute;
+	left: 628px;
+	top: 315px;
+}
+
+#logoCro {
+	position: absolute;
+	left: 543px;
+	top: 364px;
+}
+
+#line {
+	position: absolute;
+	left: 363px;
+	top: 138px;
+}
+
+/* Intro page */
+
+#intro-header {
+	width: 100%;
+	padding-top: 120px;
+	text-align: center;
+}
+
+#intro-text {
+	position: relative;
+    text-align: center;
+    top: -30px;
+    width: 100%;
+}
+
+#intro-text h1 {
+	line-height: 37px;
+}
+
+#main .comment {
+	width: 100%;
+	text-align: center;
+	font: italic 12px 'Helvetica', sans-serif;
+}
+
+.intro-start {
+	margin: 0 auto;
+	text-align: center;
+	cursor: pointer;
+	width: 120px;
+	height: 100%;
+}
+
+.intro-start h2 {
+	display: inline-block;
+}
+.intro-start img {
+	display: inline-block;
+    position: relative;
+    top: -4px;
+}
+
+/* question 1 */
+#question, .english, .croatian {
+	max-height: 550px;
+}
+
+#question img {
+	position: relative;
+	z-index: 1;
+}
+
+#text {
+    background: #ffffff;
+	margin: 0 auto;
+	z-index: 3;
+	position: relative;
+}
+
+#question h2 {
+	font-size: 30px;
+	text-align: center;
+}
+
+#next {
+	bottom: 81px;
+    cursor: pointer;
+    left: 425px;
+    position: absolute;
+    text-align: center;
+}
+
+#next h2 {
+	display: inline-block;
+}
+#next img {
+	display: inline-block;
+    left: 4px;
+    position: relative;
+    top: -6px;
+}
+
+.custom input {
+	margin: 0;
+	padding: 0;
+	float: left;
+	width: 20px;
+	height: 20px;
+}
+.custom span.radio-container {
+	position: relative;
+	float: left;
+	margin-right: 3px;
+}
+
+.custom span.radio-container span.radio {
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: url(../img/radio-2.png) no-repeat top left;
+}
+
+.custom span.radio-container span.radio.selected {
+	background-position: top right;
+}
+
+.custom span.radio-container input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	z-index: 101;
+	cursor: pointer;
+}
+
+#printout {
+	bottom: 186px;
+    font: italic 15px Helvetica,sans-serif;
+    position: relative;
+    text-align: center;
+    display: block;
+}
+
+/* footer */
+
+footer section {
+	position: absolute;
+	width: 100%
+}
+
+section#ornament01 {
+	background: url(../img/bottomOrnament01.png) repeat-x;
+	height: 25px;
+	bottom: 35px;
+}
+
+
+section#ornament02 {
+	background: url(../img/bottomOrnament02.png) repeat-x;
+	bottom: 17px;
+    height: 18px;
+}
+
+section#ornament03 {
+	background: url(../img/bottomOrnament03.png) repeat-x;
+	bottom: 0;
+    height: 15px;
+}
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
