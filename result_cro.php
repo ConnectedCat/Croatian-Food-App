@@ -4,13 +4,8 @@
 
 	<img src="results/cro/<?php echo $_SESSION['result']; ?>.png">
 	<span id="printout">Za cijeli profil, uzmite isprint.</span>
-	<script>
-		$(document).ready(function(){
-			 setTimeout(function(){
-			 	window.location.replace("index.php")
-			 }, 10000);
-		});
-	</script>
+	<span id="finish">završi</span>
+	<script src="js/final.js"></script>
 <?php
 	include('footer.php');
 	

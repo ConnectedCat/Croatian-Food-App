@@ -391,6 +391,16 @@ form span {
     display: block;
 }
 
+#finish {
+	display: block;
+	position: relative;
+	font: 25px "Code Pro Bold LC", sans-serif;
+	text-align: center;
+	bottom: 130px;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
 /* footer */
 
 footer section {
@@ -416,9 +426,6 @@ section#ornament03 {
 	bottom: 0;
     height: 15px;
 }
-
-
-
 
 
 
